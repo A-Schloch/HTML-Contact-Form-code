@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <?php
+    if(isset($_POST["submit"])){
+      mail("example@domain.net", "Contact Form", 'Name: '.$_POST["name"].' Email: '.$_POST["email"].  Text: '.$_POST["message"]);
+      ?>
+      <h1 style="color: green;">your text here</h1>
+      <?php
+    }
+     ?>
+    <form action="index.html" method="post">
+      <input type="text" name="name" placeholder="Name" required><br>
+      <input type="email" name="email" placeholder="Email" required><br>
+      </select><br>
+      <textarea name="message" rows="8" cols="80" required></textarea><br>
+      <button type="submit" name="submit">Submit</button>
+    </form>
+  </body>
